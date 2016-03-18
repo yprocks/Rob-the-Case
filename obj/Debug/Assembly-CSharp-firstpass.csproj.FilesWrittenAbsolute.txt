@@ -1,0 +1,17 @@
+/Users/yashpatel/Documents/Unity/Rob The Case/Temp/bin/Debug/Assembly-CSharp-firstpass.dll.mdb
+/Users/yashpatel/Documents/Unity/Rob The Case/Temp/bin/Debug/Assembly-CSharp-firstpass.dll
+/Users/yashpatel/Documents/Unity/Rob The Case/obj/Debug/Assembly-CSharp-firstpass.dll
+/Users/yashpatel/Documents/Unity/Rob The Case/obj/Debug/Assembly-CSharp-firstpass.dll.mdb
+/Users/yashpatel/Documents/Unity/Rob The Case/Temp/bin/Debug/UnityEngine.dll
+/Users/yashpatel/Documents/Unity/Rob The Case/Temp/bin/Debug/UnityEditor.dll
+/Users/yashpatel/Documents/Unity/Rob The Case/Temp/bin/Debug/UnityEngine.UI.dll
+/Users/yashpatel/Documents/Unity/Rob The Case/Temp/bin/Debug/UnityEngine.Networking.dll
+/Users/yashpatel/Documents/Unity/Rob The Case/Temp/bin/Debug/Mono.Cecil.dll
+/Users/yashpatel/Documents/Unity/Rob The Case/Temp/bin/Debug/Unity.SerializationLogic.dll
+/Users/yashpatel/Documents/Unity/Rob The Case/Temp/bin/Debug/Unity.DataContract.dll
+/Users/yashpatel/Documents/Unity/Rob The Case/Temp/bin/Debug/ICSharpCode.NRefactory.dll
+/Users/yashpatel/Documents/Unity/Rob The Case/Temp/bin/Debug/Unity.UNetWeaver.dll
+/Users/yashpatel/Documents/Unity/Rob The Case/Temp/bin/Debug/Unity.UNetWeaver.dll.mdb
+/Users/yashpatel/Documents/Unity/Rob The Case/Temp/bin/Debug/Unity.CecilTools.dll
+/Users/yashpatel/Documents/Unity/Rob The Case/Temp/bin/Debug/Mono.Cecil.Pdb.dll
+/Users/yashpatel/Documents/Unity/Rob The Case/Temp/bin/Debug/Mono.Cecil.Mdb.dll
