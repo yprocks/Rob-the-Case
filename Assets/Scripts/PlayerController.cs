@@ -3,30 +3,51 @@ using System.Collections;
 
 public class PlayerController: MonoBehaviour {
 
-	public GameObject gunShot;
-	public Transform gunPoint;
-	public float fireRate = 0.5F;
+	public float fireRate = 1F;
+	public GameObject flash;
+	public GameObject silencer;
+	public Camera fpsCam;
+	public GameObject smoke;
 
 	private GameController gameController;
-	private GameObject fire;
 	private float nextFire; 
+	private bool flashEnabled;
 
 	// Use this for initialization
 	void Start () {
 		nextFire = 0F;
+		flashEnabled = false;
 		gameController = GameObject.FindGameObjectWithTag ("GameController").GetComponent<GameController>();
+		flash.SetActive (false);
+
 	}
 	
 	// Update is called once per frame
-	void FixedUpdate () {
-		
-		if (Input.GetButtonDown ("Fire1")) {
+	void Update () {
+
+		GameObject temp;
+		RaycastHit hit;
+
+		Vector3 rayOrigin = fpsCam.ViewportToWorldPoint (new Vector3(0.5F, 0.5F, 0));
+
+		if (Input.GetButtonDown ("Fire1") && !flashEnabled) {
 			if (Time.time > nextFire) {
-				fire = (GameObject)Instantiate (gunShot, gunPoint.transform.position, Quaternion.identity);
+				flash.SetActive (true);
+				flashEnabled = true;
+
+				if (Physics.Raycast (rayOrigin, fpsCam.transform.forward, out hit, 100)) {
+					//Instantiate prefab at hit.point;
+					Instantiate(smoke, hit.point, Quaternion.Euler(new Vector3(-90, 0 ,0 )));
+				}
+
 				nextFire = fireRate + Time.time;
+				temp = Instantiate (silencer);
+				Destroy (temp, 0.3F);
 			}
+		} else {
+			flash.SetActive (false);
+			flashEnabled = false;
 		}
-		Destroy (fire, 1F);
 	}
 
 	void OnTriggerEnter(Collider other){
