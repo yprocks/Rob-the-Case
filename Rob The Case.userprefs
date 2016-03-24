@@ -1,14 +1,17 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlayerController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/SwatScript.cs">
     <Files>
       <File FileName="Assets/Standard Assets/Characters/FirstPersonCharacter/Scripts/FirstPersonController.cs" Line="1" Column="1" />
       <File FileName="Assets/Standard Assets/Characters/FirstPersonCharacter/Scripts/RigidbodyFirstPersonController.cs" Line="1" Column="1" />
       <File FileName="Assets/Standard Assets/Utility/ForcedReset.cs" Line="1" Column="1" />
       <File FileName="Assets/Standard Assets/Utility/SimpleMouseRotator.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/PlayerController.cs" Line="40" Column="33" />
       <File FileName="Assets/Scripts/GameController.cs" Line="30" Column="42" />
       <File FileName="Assets/Standard Assets/Characters/FirstPersonCharacter/Scripts/MouseLook.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/DestroySmoke.cs" Line="6" Column="16" />
+      <File FileName="Assets/Standard Assets/CrossPlatformInput/Scripts/PlatformSpecific/StandaloneInput.cs" Line="10" Column="1" />
+      <File FileName="Assets/Scripts/PlayerController.cs" Line="56" Column="7" />
+      <File FileName="Assets/Scripts/SwatScript.cs" Line="28" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
