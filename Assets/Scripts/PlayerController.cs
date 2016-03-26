@@ -9,8 +9,6 @@ public class PlayerController: MonoBehaviour {
 	public Camera fpsCam;
 	public GameObject smoke;
 
-
-
 	private GameController gameController;
 	private SwatScript swatScript;
 	private Transform _transform;
@@ -43,7 +41,7 @@ public class PlayerController: MonoBehaviour {
 				flash.SetActive (true);
 				flashEnabled = true;
 
-//				Debug.Log (hit.transform.gameObject.tag);
+			//Debug.Log (hit.transform.gameObject.tag);
 
 				if (Physics.Raycast (rayOrigin, fpsCam.transform.forward, out hit, 100)) {
 					//Instantiate prefab at hit.point;
@@ -52,7 +50,7 @@ public class PlayerController: MonoBehaviour {
 						Instantiate(smoke, hit.point, Quaternion.Euler(new Vector3(-90, 0 ,0 )));
 
 					if (hit.transform.gameObject.tag == "Swat") {
-						swatScript.setAmimation (2);
+						swatScript.SetHits();
 					}
 
 				}
@@ -68,8 +66,15 @@ public class PlayerController: MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider other){
-		if (other.gameObject.tag == "Exit") {
-			gameController.SetLevelCheckpoint ();
+		if (other.gameObject.tag == "Case") {
+			gameController.FoundCase ();
+			gameController.SetScore (100);
+			Destroy (other.gameObject);
 		}
+	}
+	 
+	public void SetAnimation(){
+		swatScript.StopNavMesh ();
+//		Debug.Log ("In anim");
 	}
 }

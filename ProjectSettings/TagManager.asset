@@ -17,6 +17,10 @@ TagManager:
   - SwatHead
   - IdleGun
   - ShootGun
+  - Case
+  - ProgressUI
+  - idleGun
+  - GunScript
   layers:
   - Default
   - TransparentFX

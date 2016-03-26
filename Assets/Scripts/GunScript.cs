@@ -3,6 +3,9 @@ using System.Collections;
 
 public class GunScript : MonoBehaviour {
 
+	public GameObject muzzleFlash;
+
+	private GameController gameController;
 	private Transform _transform;
 	private float nextFire; 
 	private float fireRate;
@@ -11,7 +14,9 @@ public class GunScript : MonoBehaviour {
 	void Start () {
 		_transform = GetComponent<Transform> ();
 		nextFire = 0F;
-		fireRate = 1F;
+		fireRate = 0.6F;
+		gameController = GameObject.FindGameObjectWithTag ("GameController").GetComponent<GameController>();
+
 	}
 	
 	// Update is called once per frame
@@ -26,10 +31,10 @@ public class GunScript : MonoBehaviour {
 
 			if (Physics.Raycast (_transform.position, _transform.forward, out hit, 100)) {
 				//Instantiate prefab at hit.point;
-
-
+				Instantiate(muzzleFlash, _transform.position, Quaternion.identity);
 				if (hit.transform.gameObject.tag == "Player") {
-					
+					gameController.SetPlayerHit ();
+					gameController.SetScore (-10);
 				}
 
 			}
